@@ -1,6 +1,6 @@
 Normalize slashes in a url path.
 
-# Usage
+## Usage
 
 ```js
 import normalizePath from "normalize-url-path"
