@@ -1,0 +1,38 @@
+{
+  "name": "normalize-url-path",
+  "version": "0.0.1",
+  "description": "Normalize slashes in a url path.",
+  "homepage": "https://github.com/panchao5/normalize-url-path",
+  "author": "panchao5 <panchao626@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panchao5/normalize-url-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panchao5/normalize-url-path/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "import": "./dist/mjs/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "prebuild": "npm run clean",
+    "build": "run-p build:*",
+    "build:cjs": "tsc --module commonjs --outDir ./dist/cjs",
+    "build:mjs": "tsc --module es2020 --outDir ./dist/mjs",
+    "build:types": "tsc --declaration --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}
