@@ -1,5 +1,16 @@
-export default (path: string, stripTrailing = true) => {
+export type Options = {
+  stripTrailing?: boolean
+  ensureAbsolute?: boolean
+}
+
+export default (path: string, options: Options = {}) => {
+  const { stripTrailing = true, ensureAbsolute = false } = options
+
   if (path === '/') return '/'
+
+  if (ensureAbsolute) {
+    path = '/' + path
+  }
 
   if (path.length <= 1) return path
 

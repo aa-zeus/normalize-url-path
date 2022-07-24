@@ -1,6 +1,6 @@
 {
   "name": "normalize-url-path",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Normalize slashes in a url path.",
   "homepage": "https://github.com/panchao5/normalize-url-path",
   "author": "panchao5 <panchao626@outlook.com>",
