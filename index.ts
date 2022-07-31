@@ -3,7 +3,7 @@ export type Options = {
   ensureAbsolute?: boolean
 }
 
-export default (path: string, options: Options = {}) => {
+export function normalizeUrlPath(path: string, options: Options = {}) {
   const { stripTrailing = true, ensureAbsolute = false } = options
 
   if (path === '/') return '/'
